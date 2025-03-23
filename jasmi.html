@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="jasmi.css">
+    <script src="jasmi.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('add-recipe')">Add Recipe</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-list">
+                <p>No recipes yet. Add a new recipe to get started!</p>
+            </div>
+        </section>
+
+        <!-- Add Recipe Section -->
+        <section id="add-recipe" style="display: none;">
+            <h2>Submit Your Recipe</h2>
+            <form id="recipe-form">
+                <label for="title">Recipe Title:</label>
+                <input type="text" id="title" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" required></textarea>
+
+                <button type="submit">Submit Recipe</button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="display: none;">
+            <h2>Get in Touch</h2>
+            <p>Email: support@recipes.com</p>
+            <p>Phone: +123-456-7890</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
